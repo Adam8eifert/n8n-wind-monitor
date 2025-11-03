@@ -1,7 +1,0 @@
-# Ignoruje složku s daty a credentials n8n
-n8n_data/
-
-# Ignoruje Docker specifické soubory
-.env
-.dockerignore
-
