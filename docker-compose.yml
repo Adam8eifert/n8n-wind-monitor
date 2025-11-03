@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    restart: always
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_BASIC_AUTH_USER=admin
+      - N8N_BASIC_AUTH_PASSWORD=Sa241014 # **DŮLEŽITÉ: 
+      - DB_TYPE=sqlite
+      - GENERIC_TIMEZONE=Europe/Prague
+      - N8N_HOST=localhost
+    volumes:
+      # Ukládání dat (workflow, credentials) do složky na hostu
+      - ./n8n_data:/home/node/.n8n
